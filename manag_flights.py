@@ -1,9 +1,10 @@
 from datetime import datetime, timedelta
 from data_manager import Data_manager
+import os
 import requests
 
-TEQUILA_API = "qJkDFzpWbuqM23h3gO_HJMaWEQBGfgoF"
-TEQUILA_ENDPOINT = "https://tequila-api.kiwi.com"
+TEQUILA_API = os.environ.get("TEQUILA_API")
+TEQUILA_ENDPOINT = os.environ.get("TEQUILA_ENDPOINT")
 
 tequila_header = {
     "apikey": TEQUILA_API

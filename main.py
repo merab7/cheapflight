@@ -1,5 +1,6 @@
 from data_manager import Data_manager
 from manag_flights import Find_flight
+import os
 import smtplib
 
 
@@ -8,8 +9,8 @@ manga_data = Data_manager()
 flights = Find_flight()
 flights.search_flight()
 
-my_email = "merab1223t@gmail.com"
-password = "xhygcsvzayclrrnw"
+my_email = os.environ.get("MY_EMAIL")
+password = os.environ.get("EMAIL_PASSWORD")
         
 
 

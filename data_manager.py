@@ -1,10 +1,11 @@
 import requests
+import os
 
-TEQUILA_API = "qJkDFzpWbuqM23h3gO_HJMaWEQBGfgoF"
-TEQUILA_ENDPOINT = "https://tequila-api.kiwi.com"
-SHEETS_ENDPOINT_GET = "https://api.sheety.co/d2b88fcd13bf450ae46e33c839e83aa8/flightDeals/prices"
-SHEETS_ENDPOINT_PUT = "https://api.sheety.co/d2b88fcd13bf450ae46e33c839e83aa8/flightDeals/prices/"
-AUTOROTATION_SHEET =  "Bearer flightdealfor1223"
+TEQUILA_API = os.environ.get("TEQUILA_API")
+TEQUILA_ENDPOINT = os.environ.get("TEQUILA_ENDPOINT")
+SHEETS_ENDPOINT_GET = os.environ.get("SHEETS_ENDPOINT_GET")
+SHEETS_ENDPOINT_PUT = os.environ.get("SHEETS_ENDPOINT_PUT")
+AUTOROTATION_SHEET =  os.environ.get("AUTOROTATION_SHEET")
 
 sheet_header = {
     "Authorization": AUTOROTATION_SHEET
